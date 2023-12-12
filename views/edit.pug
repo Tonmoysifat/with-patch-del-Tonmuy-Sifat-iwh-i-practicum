@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        title= `${title}`
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1.aUbtn  #[a(href='/?object=sportsman') Return to the homepage]
+        .form-wrapper
+            form(method="POST")
+                label(for="newName") Sportsman name
+                input(type="text"  name="newName" required value = `${spName}`)
+                label(for="newJob") Job
+                input(type="text"  name="newJob" required value = `${job}`)
+                label(for="newAge") Age
+                input(type="number"  name="newAge" required value = `${age}`)
+                input(type="submit" value="Submit")
+                button #[a.canbtn(href='/?object=sportsman') Cancel]

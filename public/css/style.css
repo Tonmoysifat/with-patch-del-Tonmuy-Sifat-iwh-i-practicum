@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body, * {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 1rem;
+}
+
+
+.aUbtn{
+    padding: 30px;
+    display: inline;
+}
+.delAlert{
+    color: red;
+}
+
+.table-bordered {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 25px;
+  }
+  
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table-bordered th {
+    background-color: #f2f2f2;
+  }
+  
+
+.form-wrapper {
+    font-size: 18px;
+    max-width: 768px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: solid 1px lightgrey;
+    border-radius: 15px;
+    box-shadow: 3px 2px 6px lightgrey;
+}
+
+label, input {
+    margin-top: 5px;
+    display: block;
+    font-size: inherit;
+}
+
+input[type="text"] {
+    padding: .25rem;
+}
+
+input[type="submit"] {
+    background-color: lightgrey;
+    border: none;
+    padding: .375rem 1rem;
+    margin-top: 10px;
+    display: inline;
+    margin-right: 20px;
+}
+button{
+    background-color: lightgrey;
+    border: none;
+    padding: .375rem 1rem;
+    margin-top: 10px;
+}
+.canbtn{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+   
+   
+}

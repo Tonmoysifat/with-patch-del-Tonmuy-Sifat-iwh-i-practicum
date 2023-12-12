@@ -1,0 +1,24 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+       h1 Custom Object Table
+       h1.aUbtn  #[a(href='/add-cobjr?object=sportsman') Add records]
+        table.table-bordered
+            tr
+                th SPORTSMAN NAME
+                th JOB
+                th AGE
+            each sportsman in data
+                tr
+                    td #{sportsman.properties.sportsman_name}
+                        h4.aUbtn  #[a(href=`/edit-cobjr?id=${sportsman.id}`) Edit] 
+                        h4.aUbtn  #[a(href=`/delete-cobjr?id=${sportsman.id}`) Delete] 
+                    td #{sportsman.properties.job}
+                    td #{sportsman.properties.age}
+                   
+         
+            

@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        title= `${title}`
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        //- h1.aUbtn  #[a(href='/?object=sportsman') Return to the homepage]
+        h1.delAlert Do you really want to delete this record?
+        .form-wrapper
+            form(method="POST")
+                h2 Sportsman Name: #{spName}
+                h2 Age: #{age}
+                h2 Job: #{job}
+                input(type="submit" value="Delete")
+                button #[a.canbtn(href='/?object=sportsman') Cancel]
