@@ -6,8 +6,7 @@ app.set("view engine", "pug");
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-const PRIVATE_APP_ACCESS = "pat-na1-70ff0916-a2af-4afe-ae5c-a4588689a099";
+require('dotenv').config();
 
 // * Code for Route 1 goes here
 app.get("/", async (req, res) => {
@@ -15,7 +14,7 @@ app.get("/", async (req, res) => {
   const sportsman = `https://api.hubspot.com/crm/v3/objects/${object}?idProperty=object&properties=sportsman_name,job,age`;
 
   const headers = {
-    Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+    Authorization: `Bearer ${process.env.PRIVATE_APP_ACCESS}`,
     "Content-Type": "application/json",
   };
 
@@ -39,7 +38,7 @@ app.get("/add-cobjr", async (req, res) => {
   const sportsman = `https://api.hubspot.com/crm/v3/objects/${object}?idProperty=object&properties=sportsman_name,job,age`;
 
   const headers = {
-    Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+    Authorization: `Bearer ${process.env.PRIVATE_APP_ACCESS}`,
     "Content-Type": "application/json",
   };
 
@@ -70,7 +69,7 @@ app.post("/add-cobjr", async (req, res) => {
   const CreateSportsman = `https://api.hubspot.com/crm/v3/objects/${object}?idProperty=object&properties=sportsman_name,job,age`;
 
   const headers = {
-    Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+    Authorization: `Bearer ${process.env.PRIVATE_APP_ACCESS}`,
     "Content-Type": "application/json",
   };
 
@@ -87,7 +86,7 @@ app.get("/edit-cobjr", async (req, res) => {
   const editSportsman = `https://api.hubspot.com/crm/v3/objects/2-18201194/${id}?portalId=39964667&properties=sportsman_name,job,age`;
 
   const headers = {
-    Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+    Authorization: `Bearer ${process.env.PRIVATE_APP_ACCESS}`,
     "Content-Type": "application/json",
   };
 
@@ -116,7 +115,7 @@ app.post("/edit-cobjr", async (req, res) => {
   const id = req.query.id;
   const editSportsman = `https://api.hubspot.com/crm/v3/objects/2-18201194/${id}?portalId=39964667&properties=sportsman_name,job,age`;
   const headers = {
-    Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+    Authorization: `Bearer ${process.env.PRIVATE_APP_ACCESS}`,
     "Content-Type": "application/json",
   };
 
@@ -133,7 +132,7 @@ app.get("/delete-cobjr", async (req, res) => {
   const deleteSportsman = `https://api.hubspot.com/crm/v3/objects/2-18201194/${id}?portalId=39964667&properties=sportsman_name,job,age`;
 
   const headers = {
-    Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+    Authorization: `Bearer ${process.env.PRIVATE_APP_ACCESS}`,
     "Content-Type": "application/json",
   };
 
@@ -155,7 +154,7 @@ app.post("/delete-cobjr", async (req, res) => {
   const id = req.query.id;
   const deleteSportsman = `https://api.hubspot.com/crm/v3/objects/2-18201194/${id}?portalId=39964667&properties=sportsman_name,job,age`;
   const headers = {
-    Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+    Authorization: `Bearer ${process.env.PRIVATE_APP_ACCESS}`,
     "Content-Type": "application/json",
   };
 
